@@ -1,0 +1,314 @@
+/* ===========================
+   GOOGLE FONT VARIABLES
+=========================== */
+
+:root{
+
+    --bg:#0b0b0b;
+    --bg-light:#121212;
+
+    --text:#F5F5F5;
+    --text-light:#BDBDBD;
+
+    --primary:#d6ff39;
+
+    --border:#242424;
+
+    --container:1250px;
+
+    --transition:.35s ease;
+
+}
+
+
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    font-family:"IBM Plex Mono", monospace;
+
+    overflow-x:hidden;
+
+}
+
+
+/* ===========================
+   BACKGROUND GRID
+=========================== */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+
+        linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),
+
+        linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+
+    background-size:60px 60px;
+
+    pointer-events:none;
+
+    z-index:-2;
+
+}
+
+
+/* ===========================
+   RADIAL GLOW
+=========================== */
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:700px;
+
+    height:700px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+            rgba(214,255,57,.08),
+            transparent 70%);
+
+    top:-250px;
+
+    right:-150px;
+
+    pointer-events:none;
+
+    filter:blur(10px);
+
+    z-index:-1;
+
+}
+
+
+/* ===========================
+   TYPOGRAPHY
+=========================== */
+
+h1,
+h2,
+h3{
+
+    font-family:"Bebas Neue", sans-serif;
+
+    letter-spacing:2px;
+
+    font-weight:400;
+
+}
+
+h1{
+
+    font-size:6rem;
+
+    line-height:.9;
+
+}
+
+h2{
+
+    font-size:3.5rem;
+
+}
+
+p{
+
+    color:var(--text-light);
+
+    line-height:1.8;
+
+    font-size:15px;
+
+}
+
+
+/* ===========================
+   LINKS
+=========================== */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+
+/* ===========================
+   IMAGES
+=========================== */
+
+img{
+
+    width:100%;
+
+    display:block;
+
+}
+
+
+/* ===========================
+   CONTAINER
+=========================== */
+
+section{
+
+    width:min(92%,var(--container));
+
+    margin:auto;
+
+}
+
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.primary-btn{
+
+    background:var(--primary);
+
+    color:#111;
+
+    padding:16px 34px;
+
+    border-radius:50px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-weight:600;
+
+    font-family:inherit;
+
+    font-size:14px;
+
+    transition:var(--transition);
+
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-4px);
+
+}
+
+
+.secondary-btn{
+
+    border:1px solid var(--border);
+
+    padding:16px 34px;
+
+    border-radius:50px;
+
+    display:inline-flex;
+
+    font-family:inherit;
+
+    font-size:14px;
+
+    transition:var(--transition);
+
+}
+
+.secondary-btn:hover{
+
+    border-color:var(--primary);
+
+    color:var(--primary);
+
+}
+
+
+/* ===========================
+   SECTION TITLE
+=========================== */
+
+.section-title{
+
+    color:var(--primary);
+
+    font-size:14px;
+
+    letter-spacing:3px;
+
+    margin-bottom:20px;
+
+}
+
+
+/* About styles in components.css */
+
+/* Placeholder removed — section heights handled in sections.css */
+
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:50px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111;
+
+}
+
+
+/* ===========================
+   TEXT SELECTION
+=========================== */
+
+::selection{
+
+    background:var(--primary);
+
+    color:#000;
+
+}
