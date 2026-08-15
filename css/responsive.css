@@ -145,6 +145,14 @@
 
         z-index:1001;
 
+        position:absolute;
+
+        right:20px;
+
+        top:50%;
+
+        transform:translateY(-50%);
+
     }
 
     nav ul{

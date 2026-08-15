@@ -1283,7 +1283,7 @@ CONTACT
 
         <div class="contact-form">
 
-            <form>
+            <form onsubmit="event.preventDefault(); let msg = this.querySelector('textarea').value; window.open('https://wa.me/918714587670?text=' + encodeURIComponent(msg), '_blank');">
 
                 <input
                     type="text"
@@ -1296,7 +1296,7 @@ CONTACT
                 <textarea
                     placeholder="Message"></textarea>
 
-                <button>
+                <button type="submit">
 
                     Send Message
 
