@@ -1283,7 +1283,7 @@ CONTACT
 
         <div class="contact-form">
 
-            <form onsubmit="event.preventDefault(); let msg = this.querySelector('textarea').value; window.open('https://wa.me/918714587670?text=' + encodeURIComponent(msg), '_blank');">
+            <form onsubmit="event.preventDefault(); let name = this.querySelector('input[type=text]').value; let email = this.querySelector('input[type=email]').value; let msg = this.querySelector('textarea').value; window.location.href = 'mailto:aneena569@gmail.com?subject=Portfolio Contact from ' + encodeURIComponent(name) + '&body=' + encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + msg);">
 
                 <input
                     type="text"
