@@ -671,6 +671,15 @@
 
     }
 
+    .timeline-item:nth-child(odd) .timeline-tech,
+    .timeline-item:nth-child(odd) .timeline-date{
+        float:none;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-tech{
+        justify-content:flex-start;
+    }
+
 }
 
 @media(max-width:768px){
